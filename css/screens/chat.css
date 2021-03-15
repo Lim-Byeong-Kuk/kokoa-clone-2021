@@ -1,0 +1,266 @@
+#chat-screen {
+  background-color: #abc1d1;
+}
+
+#chat-screen .status-bar,
+#chat-screen .alt-header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #abc1d1;
+}
+#chat-screen .status-bar {
+  z-index: 2;
+}
+#chat-screen .alt-header {
+  z-index: 1;
+}
+/*
+@keyframes fadeIn {
+  0% {
+    transform: none;
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+*/
+.main-chat {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+@keyframes timestamp-bounce {
+  from{
+    transform:translateY(-120px);
+  }
+  to{
+    none;
+  }
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 10px 15px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  animation: timestamp-bounce 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 70px;
+  height: 70px;
+  border-radius: 30%;
+  margin-right: 10px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__aurthor {
+  opacity: 0.8;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 8px 15px;
+  font-size: 25px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__time {
+  opacity: 0.8;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply .reply__column:first-child {
+  width: 5%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply input {
+  padding-left: 10px;
+  height: 33px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -3px;
+  top: 3px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 11px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.reply__colymn button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply i {
+  opacity: 0.6;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 93vw;
+  transform: translateX(-12%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
+}
+
+@keyframes leftmessage-bounce {
+  from {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes rightmessage-bounce {
+  from {
+    transform: translateX(+50%);
+    opacity:1;
+  }
+  to {
+    transform: none;
+    opacity:1;
+  }
+}
+@keyframes leftbubble-bounce{
+  0%{
+    transform:translateX(-50%);
+    opacity:0;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity:1;
+    transform:none;
+  }
+}
+
+.message-row__yeji1 {
+  animation: leftmessage-bounce 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+  animation-delay:800ms;
+  opacity: 0;
+  
+}
+
+.message__info-yeji1{
+  animation: leftbubble-bounce 500ms cubic-bezier(0.280, 1.650, 0.615, 1.650) 
+  forwards;
+  animation-delay:1600ms;
+  opacity:0;
+  position:absolute;
+  z-index:-1;
+}
+
+.message-row--own {
+  animation: rightmessage-bounce 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+  animation-delay:2100ms;
+  opacity:0;
+}
+
+.message-row__jiheon1{
+  animation: leftmessage-bounce 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+  animation-delay:800ms;
+  opacity: 0;
+}
+.message-row__jiheon2{
+  animation: leftmessage-bounce 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+  animation-delay:1600ms;
+  opacity: 0;
+}

@@ -1,0 +1,99 @@
+.body{
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  background-color:#F5F5F5; 
+}
+
+.header{
+  display:flex;
+  font-size: 26px;
+  font-style:normal;
+  font-weight: 800;
+  justify-content:center;
+  margin-top:37px;
+  margin-bottom:60px;
+}
+.main{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.main-row{
+display: flex;
+margin-top:20px;
+}
+
+.poster{
+  background-color:white;
+  height:310px;
+  width:180px;
+  margin-left:20px;
+}
+
+.poster-tomato{
+  position: relative;
+  top:5px;
+  left:5px;
+  display:block;
+  height:300px;
+  width:170px;
+  background-color:tomato;
+
+}
+
+.poster-teal{
+  position: relative;
+  top:5px;
+  left:5px;
+  display:block;
+  height:300px;
+  width:170px;
+  background-color:teal;
+
+}
+
+.poster-burlywood{
+  position: relative;
+  top:5px;
+  left:5px;
+  display:block;
+  height:300px;
+  width:170px;
+  background-color:burlywood;
+}
+
+.poster-thistle{
+  position: relative;
+  top:5px;
+  left:5px;
+  display:block;
+  height:300px;
+  width:170px;
+  background-color:thistle;
+}
+
+.poster div div{
+  position: relative;
+  top:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  height:100px;
+  width:170px;
+  background-color:white;
+
+}
+
+.poster div div span:first-child{
+  font-size: 17px;
+  padding-left:5px;
+  font-weight:700;
+}
+
+.poster div div span:last-child{
+  font-size: 13px;
+  padding-left:5px;
+  font-weight:700;
+}

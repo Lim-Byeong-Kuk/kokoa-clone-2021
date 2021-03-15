@@ -1,0 +1,46 @@
+.settings-setting {
+  padding: 25px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-setting i {
+  margin-right: 20px;
+  font-size: 22px;
+  color: var(--gray);
+}
+.settings__setting-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings__setting-column:last-child {
+  opacity: 0.5;
+}
+
+.settings-setting__version {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  transition-duration: 4s;
+}
+
+@keyframes setting-lightning {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.setting-version {
+  color: tomato;
+  animation: setting-lightning 1.5s ease-in-out infinite;
+}
